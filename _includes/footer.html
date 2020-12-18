@@ -1,9 +1,9 @@
     <!-- Footer -->
-    <footer class="text-center">
+    <footer id="footer" class="text-center">
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-6">
+                    <div class="footer-col col-md-3">
                         <h3>{{ site.footer.location }}</h3>
                         <p>
                             {% for adress in site.address %}
@@ -20,6 +20,10 @@
                             </li>
 		                    {% endfor %}
                         </ul>
+                    </div>
+                    <div class="footer-col col-md-3">
+                        <h3>Contact</h3>
+                        <p><i class="fa fa-fw fa-envelope"></i> rnaidich@stanford.edu</p>
                     </div>
                 </div>
             </div>
