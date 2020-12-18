@@ -300,6 +300,21 @@ section.success {
     }
   } */
 
+.profile-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-picture {
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .btn-outline {
     margin-top: 15px;
     border: solid 2px #fff;
