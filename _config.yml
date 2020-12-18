@@ -17,7 +17,7 @@ bing_verify:
 # - static : pass through formspree.io to validate email sending
 # - disqus : replace contact form by disqus thread
 # - comment the line below if you want to stick with the default PHP contact form
-contact: static
+# contact: static
 
 # If you use disqus you need disqus shortname
 # https://help.disqus.com/customer/portal/articles/466208
@@ -29,21 +29,6 @@ color:
   primary-rgb: "22,177,181"
   secondary: '000000'
   secondary-dark: '343434'
-
-  # primary: F76C6C
-  # primary-rgb: "128,179,255"
-  # secondary: 374785
-  # secondary-dark: 24305E
-
-  # primary: 80B3FF
-  # primary-rgb: "128,179,255"
-  # secondary: FD6E8A
-  # secondary-dark: A2122F
-
-  # primary: 18bc9c #80B3FF
-  # primary-rgb: "24,288,156" #"128,179,255"
-  # secondary: 2c3e50 #FD6E8A
-  # secondary-dark: 233140 #A2122F
 
 # Footer settings
 footer:
