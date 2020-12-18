@@ -25,10 +25,21 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 80B3FF
-  primary-rgb: "128,179,255"
-  secondary: FD6E8A
-  secondary-dark: A2122F
+  primary: 16B1B5
+  primary-rgb: "22,177,181"
+  secondary: '000000'
+  secondary-dark: '343434'
+
+  # primary: F76C6C
+  # primary-rgb: "128,179,255"
+  # secondary: 374785
+  # secondary-dark: 24305E
+
+  # primary: 80B3FF
+  # primary-rgb: "128,179,255"
+  # secondary: FD6E8A
+  # secondary-dark: A2122F
+
   # primary: 18bc9c #80B3FF
   # primary-rgb: "24,288,156" #"128,179,255"
   # secondary: 2c3e50 #FD6E8A
