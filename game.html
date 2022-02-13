@@ -9,11 +9,14 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Disappearance of Jennifer Smith.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Disappearance of Jennifer Smith" startnode="1" creator="Twine" creator-version="2.3.16" ifid="6C8EE99C-61B6-4F4B-9FD1-C337EC3600B8" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="620,292" size="100,100">You are Emma, a 21 year old college student at Bluetown University. The date is February 1st, 2122. 
+<tw-storydata name="The Disappearance of Jennifer Smith" startnode="1" creator="Twine" creator-version="2.3.16" ifid="6C8EE99C-61B6-4F4B-9FD1-C337EC3600B8" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="620,292" size="100,100">&#39;&#39;The Disapperance of Jennifer Smith&#39;&#39;
+
+You are Emma, a 21 year old college student at Bluetown University. The date is February 1st, 2122. 
+
 [[Start Game-&gt;Start]]
 (set:$buyIdCards to false)(set:$pickUpIdCards to false)(set:$findIdNumber to false)</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="617,418" size="100,100">You&#39;re walking through the woods near your college dorm, listening to sad music while scrolling through old photos on your phone of you and your ex, Samantha. &quot;Ugh, I still don&#39;t understand why she left me,&quot; you think to yourself. &quot;I don&#39;t feel like doing anything without her.&quot; 
 
-You get a text from your friend Alex that says, &quot;Hey! I&#39;m throwing a party tomorrow night right outside the dorm. Do you want to come?&quot;
+You get a text from your friend Alex that says, &quot;Hey! I&#39;m throwing a party tonight right outside the dorm. Do you want to come?&quot;
 
 You respond with:
 (link: &quot;Sorry, I&#39;m not really in the mood&quot;)[\
@@ -86,12 +89,16 @@ Alice: Yeah, I wonder what&#39;s going on.]
 [[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="9" name="Eric&#39;s room" tags="" position="618,870" size="100,100">You knock on Eric&#39;s door. 
 
 (if:$listenToJosh is true)[
-(if: $getFootage is true)[(set: $getInvite to true)You and Jackson waslk into Eric&#39;s room.
+(if: $getFootage is true)[(set: $getInvite to true)You and Jackson walk into Eric&#39;s room.
+
+Eric: I told you I can&#39;t help you. Go away.
 
 You: Take a look at this footage we found of your grandfather yelling homophobic slurs at another student while he was here. Do you want this getting released to the public?
 
-Eric: Okay, fine. Whatever. You can take this invite slip to join the secret society and give it to the RA.]
-(elseif: $talkToBarista is true)[(set: $attemptBlackmail to true)You and Jackson walk into Eric&#39;s room.
+Eric: Screw you guys. Whatever. You can take this invite slip to join the secret society and give it to the frickin RA.]
+(elseif: $talkToBarista is true)[(set: $attemptBlackmail to true)Eric: What do you want?
+
+You and Jackson walk into Eric&#39;s room.
 
 You: The RA in the dorm is hoping to get into the Bluetown secret society, and we were wondering if you could help. 
 
@@ -351,7 +358,7 @@ You feel tired, so you plop down into Jennifer&#39;s comfy couch. Your vision go
 
 </tw-passagedata><tw-passagedata pid="21" name="Check Phone" tags="" position="1881,339" size="100,100">[[Amazon.com -- free 2 second shipping!-&gt;Amazon]]
 [[Google.com -- search for anything-&gt;Google]]
-[[Bluewater University Student Directory -- find student ID numbers-&gt;Student Directory]]
+[[Bluetown University Student Directory -- find student ID numbers-&gt;Student Directory]]
 
 [[Leave-&gt;Outside]]</tw-passagedata><tw-passagedata pid="22" name="Amazon" tags="" position="2025,551" size="100,100">(if: $googleSearch is true)[[[Buy Lock Picks-&gt;Buy lock picks]]]
 (elseif: $talkToPackageCenter is true)[[[Buy Blank ID Cards-&gt;Buy Blank ID Cards]]]
@@ -365,7 +372,7 @@ You feel tired, so you plop down into Jennifer&#39;s comfy couch. Your vision go
 [[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="25" name="Student Directory" tags="" position="2015,182" size="100,100">(if: $talkToPackageCenter is true)[[[Look up Jennifer Smith-&gt;Look up Jennifer Smith]]]
 (else:)[I don&#39;t have anyone to look up]
 
-[[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="26" name="Check Yearbooks" tags="" position="1122,1010" size="100,100">(if: $talkToPackageCenter is true)[[[Grab last year&#39;s yearbook to scan Samantha&#39;s photo-&gt;Grab yearbook]]]
+[[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="26" name="Check Yearbooks" tags="" position="1122,1010" size="100,100">(if: $talkToPackageCenter is true)[[[Grab last year&#39;s yearbook to scan Jennifer&#39;s photo-&gt;Grab yearbook]]]
 (else:)[I don&#39;t have any yearbooks I want to look at.]
 
 [[Go back-&gt;Library]] </tw-passagedata><tw-passagedata pid="27" name="Use Printer" tags="" position="1399,993" size="100,100">(if: $talkToPackageCenter is true)[
