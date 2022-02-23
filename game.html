@@ -9,12 +9,29 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play The Disappearance of Jennifer Smith.</tw-noscript></noscript></tw-story>
-<tw-storydata name="The Disappearance of Jennifer Smith" startnode="1" creator="Twine" creator-version="2.3.16" ifid="6C8EE99C-61B6-4F4B-9FD1-C337EC3600B8" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="620,292" size="100,100">&#39;&#39;The Disapperance of Jennifer Smith&#39;&#39;
+<tw-storydata name="The Disappearance of Jennifer Smith" startnode="1" creator="Twine" creator-version="2.3.16" ifid="6C8EE99C-61B6-4F4B-9FD1-C337EC3600B8" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%; /* padding-right of the tw-story element. */
+  max-height: 100%;
+  margin-top: 5%; /* padding-top of the tw-story element. */
+  padding: 0 0.5em 0.5em 0.5em;
+  text-align: right;
+  background-color: transparent;
+}
+tw-icon {
+  text-align: right;
+  padding-right: 0.75em;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Intro" tags="" position="618,291" size="100,100">&#39;&#39;The Disapperance of Jennifer Smith&#39;&#39;
 
 You are Emma, a 21 year old college student at Bluetown University. The date is February 1st, 2122. 
 
 [[Start Game-&gt;Start]]
-(set:$buyIdCards to false)(set:$pickUpIdCards to false)(set:$findIdNumber to false)</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="617,418" size="100,100">You&#39;re walking through the woods near your college dorm, listening to sad music while scrolling through old photos on your phone of you and your ex, Samantha. &quot;Ugh, I still don&#39;t understand why she left me,&quot; you think to yourself. &quot;I don&#39;t feel like doing anything without her.&quot; 
+(set:$buyIdCards to false)
+(set:$pickUpIdCards to false)
+(set:$findIdNumber to false)
+(set:$yearbook to false)</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="617,417" size="100,100">You&#39;re walking through the woods near your college dorm, listening to sad music while scrolling through old photos on your phone of you and your ex, Samantha. &quot;Ugh, I still don&#39;t understand why she left me,&quot; you think to yourself. &quot;I don&#39;t feel like doing anything without her.&quot; 
 
 You get a text from your friend Alex that says, &quot;Hey! I&#39;m throwing a party tonight right outside the dorm. Do you want to come?&quot;
 
@@ -31,14 +48,14 @@ You respond with:
 	(set: $answer to 3)\
 	(go-to: &quot;Locket&quot;)\
 ]
-[[Sure!-&gt;Delete]]</tw-passagedata><tw-passagedata pid="3" name="Locket" tags="" position="544,568" size="100,100">You: I really should be going out and meeting new people, but I just can&#39;t bring myself to do it.
+[[Sure!-&gt;Delete]]</tw-passagedata><tw-passagedata pid="3" name="Locket" tags="" position="545,568" size="100,100">(set: $objective1 to true)You: I really should be going out and meeting new people, but I just can&#39;t bring myself to do it.
 
 You look up from your phone and see a gold locket necklace lying in the grass that oddly looks like the matching ones you and Samantha had. You angrily wonder if Samantha threw hers away in the woods. 
 
 When you get closer, you realize that it&#39;s not Samantha&#39;s. It is cracked open and has a picture inside of Jennifer, a girl from your dorm. But Jennifer usually has blonde hair, and she strangely has red hair in the photo. Did she dye her hair? 
 
 You decide that Jennifer must have lost her locket, and you pick it up to return it to her. An unexplainable huge feeling of dread fills your soul the second you touch it. You can&#39;t help but feel like something is wrong.
-[[Head to the dorm-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="4" name="Delete" tags="" position="692,570" size="100,100">[[You change your mind and delete your message before sending-&gt;Start]]</tw-passagedata><tw-passagedata pid="5" name="Dorm" tags="" position="542,719" size="100,100">You&#39;re in the dorm
+[[Head to the dorm-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="4" name="Delete" tags="" position="692,570" size="100,100">[[You change your mind and delete your message before sending-&gt;Start]]</tw-passagedata><tw-passagedata pid="5" name="Dorm" tags="" position="542,718" size="100,100">You&#39;re in the dorm
 Go to:
 [[The lounge]]
 [[Jennifer&#39;s room]]
@@ -52,7 +69,7 @@ Go to:
 (if: $talkedToJackson is true)[
 [[Leave-&gt;Outside]]
 ]</tw-passagedata><tw-passagedata pid="6" name="The lounge" tags="" position="15,867" size="100,100">(if: $talkedToJackson is true)[The lounge is empty.]
-(else:)[(set: $talkedToJackson to true)
+(else:)[(set: $talkedToJackson to true)(set: $objective1 to false)(set: $objective2 to true)
 You see Jackson crying in the lounge. 
 
 You: Jackson, are you okay? What&#39;s wrong?
@@ -69,13 +86,13 @@ Jackson: I don&#39;t think I&#39;ve ever seen her wearing this. Do you think som
 
 You: I&#39;m not sure, but I promise I&#39;ll help you later. We need to get to class.]
 
-[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="7" name="Jackson&#39;s room" tags="" position="316,871" size="100,100">You knock on Jackson&#39;s door. There&#39;s no response.
+[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="7" name="Jackson&#39;s room" tags="" position="317,870" size="100,100">You knock on Jackson&#39;s door. There&#39;s no response.
 
-[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="8" name="Liam&#39;s room" tags="" position="466,872" size="100,100">You knock on Liam&#39;s door. 
+[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="8" name="Liam&#39;s room" tags="" position="465,871" size="100,100">You knock on Liam&#39;s door. 
 
 Liam: Come in!
 
-(if: $flashback1 is true)[(set: $talkToLiam to true)You and Jackson walk into Liam&#39;s room.
+(if: $flashback1 is true)[(if: $talkToSydney is true)[(set: $objective3 to false)](set: $talkToLiam to true)(set: $objective4 to true)You and Jackson walk into Liam&#39;s room.
 
 You: Have you seen Jennifer recently? Jackson says she&#39;s missing. 
 
@@ -89,14 +106,14 @@ Alice: Yeah, I wonder what&#39;s going on.]
 [[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="9" name="Eric&#39;s room" tags="" position="618,870" size="100,100">You knock on Eric&#39;s door. 
 
 (if:$listenToJosh is true)[
-(if: $getFootage is true)[(set: $getInvite to true)You and Jackson walk into Eric&#39;s room.
+(if: $getFootage is true)[(set: $getInvite to true)(set: $objective17 to false)(set: $objective18 to true)You and Jackson walk into Eric&#39;s room.
 
 Eric: I told you I can&#39;t help you. Go away.
 
 You: Take a look at this footage we found of your grandfather yelling homophobic slurs at another student while he was here. Do you want this getting released to the public?
 
 Eric: Screw you guys. Whatever. You can take this invite slip to join the secret society and give it to the frickin RA.]
-(elseif: $talkToBarista is true)[(set: $attemptBlackmail to true)Eric: What do you want?
+(elseif: $talkToBarista is true)[(set: $attemptBlackmail to true)(set: $objective15 to false)(set: $objective16 to true)Eric: What do you want?
 
 You and Jackson walk into Eric&#39;s room.
 
@@ -121,10 +138,10 @@ You: Have you seen Jennifer recently? Jackson says she&#39;s missing.
 Eric: Haven&#39;t seen her.]
 (else:)[Eric: Go away!]
 
-[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="10" name="Sydney&#39;s room" tags="" position="767,868" size="100,100">(if:$flashback2 is true)[Your vision fades back in. You&#39;re back in Sydney&#39;s room and see her talking to her mom. Why do these strange dreams keep happening?
+[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="10" name="Sydney&#39;s room" tags="" position="768,868" size="100,100">(if:$flashback2 is true)[Your vision fades back in. You&#39;re back in Sydney&#39;s room and see her talking to her mom. Why do these strange dreams keep happening?
 
 [[Go back-&gt;Dorm]]]
-(elseif: $flashback1 is true)[You knock on Sydney&#39;s door.
+(elseif: $flashback1 is true)[(if: $talkToLiam is true)[(set: $objective3 to false)]You knock on Sydney&#39;s door.
 
 Sydney: Come in!
 
@@ -141,7 +158,7 @@ You watch Sydney pick up the phone, and your vision goes black.
 
 [[Go back-&gt;Dorm]]]
 
-</tw-passagedata><tw-passagedata pid="11" name="Alice&#39;s room" tags="" position="916,871" size="100,100">(if: $pepperspray is true)[(set: $talkToAlice to true)You knock on Alice&#39;s door.
+</tw-passagedata><tw-passagedata pid="11" name="Alice&#39;s room" tags="" position="916,871" size="100,100">(if: $pepperspray is true)[(if: $talkToEmily is true)[(set: $objective10 to false)](set: $talkToAlice to true)(set: $objective11 to true)You knock on Alice&#39;s door.
 
 Alice: Come in!
 
@@ -167,7 +184,7 @@ You: Have you seen Jennifer recently? Jackson says she&#39;s missing.
 Alice: Sorry, I haven&#39;t seen her for a while.]
 (else:)[You knock on Alice&#39;s door. There is no response.]
 
-[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="12" name="Emily&#39;s room" tags="" position="1067,871" size="100,100">(if: $pepperspray is true)[(set: $talkToEmily to true)You knock on Emily&#39;s door.
+[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="12" name="Emily&#39;s room" tags="" position="1067,871" size="100,100">(if: $pepperspray is true)[(if: $talkToAlice is true)[(set: $objective10 to false)](set: $talkToEmily to true)(set: $objective12 to true)You knock on Emily&#39;s door.
 
 Emily: Come in!
 
@@ -187,7 +204,7 @@ You: Have you seen Jennifer recently? Jackson says she&#39;s missing.
 Emily: No, I haven&#39;t seen her for a bit. Sorry. ]
 (else:)[You knock on Emily&#39;s door. There is no response.]
 
-[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="13" name="Outside" tags="" position="1492,508" size="100,100">You&#39;re outside
+[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="13" name="Outside" tags="" position="1514,544" size="100,100">You&#39;re outside
 Go to:
 [[Dorm]]
 [[Library]]
@@ -210,10 +227,10 @@ or [[Check Phone]]</tw-passagedata><tw-passagedata pid="14" name="Library" tags=
 Jackson: Woah, there&#39;s a whole secret passageway down there. Should we go down?
 
 [[Head down the hatch-&gt;Bunker]]]
-(elseif: $pickUpLockPicks is true)[(set: $unlockHatch to true)You go back to the location of Jennifer&#39;s Tile, and you get to work on trying to unlock the hatch in the ground with the lock pick. You finally get the lock open, and your vision goes black. 
+(elseif: $pickUpLockPicks is true)[(set: $unlockHatch to true)(set: $objective23 to false)You go back to the location of Jennifer&#39;s Tile, and you get to work on trying to unlock the hatch in the ground with the lock pick. You finally get the lock open, and your vision goes black. 
 
 [[Enter Flashback-&gt;Flashback 6]]]
-(elseif: $flashback5 is true)[(set: $foundPhone to true)You finally track down Jennifer&#39;s phone, but she is nowhere to be seen. You pick up Jennifer&#39;s phone off the ground.
+(elseif: $flashback5 is true)[(set: $foundPhone to true)(set: $objective20 to false)(set: $objective21 to true)You finally track down Jennifer&#39;s phone, but she is nowhere to be seen. You pick up Jennifer&#39;s phone off the ground.
 
 [[Check her Text Messages]]]
 (else:)[I have nothing to do here.
@@ -221,7 +238,7 @@ Jackson: Woah, there&#39;s a whole secret passageway down there. Should we go do
 [[Leave-&gt;Outside]]]
 
 
-</tw-passagedata><tw-passagedata pid="16" name="Package Center" tags="" position="1514,265" size="100,100">(if: $buyLockPicks is true)[(set: $pickUpLockPicks to true)Package Center Robot: Do you have a package to pick up?
+</tw-passagedata><tw-passagedata pid="16" name="Package Center" tags="" position="1513,261" size="100,100">(if: $buyLockPicks is true)[(set: $pickUpLockPicks to true)(set: $objective22 to false)(set: $objective23 to true)Package Center Robot: Do you have a package to pick up?
 
 You: Yes, here&#39;s my ID card.
 
@@ -230,7 +247,7 @@ Package Center Robot: Here&#39;s your package!
 The robot hands you the package of lock picks.
 
 [[Leave-&gt;Outside]]]
-(elseif: $printIdCard is true)[(set: $pepperspray to true)Package Center Robot: Do you have a package to pick up?
+(elseif: $printIdCard is true)[(set: $pepperspray to true)(set: $objective9 to false)(set: $objective10 to true)Package Center Robot: Do you have a package to pick up?
 
 You: Yes. I&#39;m here to pick up a package for Jennifer Smith. Here is the student ID. 
 
@@ -247,7 +264,7 @@ Jackson: Why did Jennifer buy pepper spray? Did she feel like she was in danger?
 You: Why don&#39;t we ask people at the dorm if they have any ideas.
 
 [[Leave-&gt;Outside]]]
-(elseif: $buyIdCards is true)[(set: $pickUpIdCards to true)Package Center Robot: Do you have a package to pick up?
+(elseif: $buyIdCards is true)[(set: $pickUpIdCards to true)(set: $objective5 to false)Package Center Robot: Do you have a package to pick up?
 
 You: Yes, here&#39;s my ID card.
 
@@ -263,7 +280,7 @@ You: Jackson, I keep having these strange visions. I just saw something about so
 Jackson: Oh yeah, you know Eric Bloom from our dorm? His grandfather Adam Bloom was a pretty big donor to the school. Anyways, let&#39;s get to work on forging Jennifer&#39;s ID.
 
 [[Leave-&gt;Outside]]]
-(elseif: $talkToLiam is true)[(set: $talkToPackageCenter to true)Package Center Robot: Do you have a package to pick up?
+(elseif: $talkToLiam is true)[(set: $talkToPackageCenter to true)(set: $objective4 to false)(set: $objective5 to true)(set: $objective6 to true)(set: $objective7 to true)(set: $objective8 to true)Package Center Robot: Do you have a package to pick up?
 
 You: Can you check to see if Jennifer Smith came to pick up a package yesterday?
 
@@ -280,7 +297,7 @@ As you and Jackson walk away from the Package Center counter, your vision goes b
 
 You: No
 
-[[Leave-&gt;Outside]]]</tw-passagedata><tw-passagedata pid="17" name="Class" tags="" position="2023,763" size="100,100">(if: $talkToEmily is true)[(set: $talkToTA to true)TA: Hey! What can I do for you?
+[[Leave-&gt;Outside]]]</tw-passagedata><tw-passagedata pid="17" name="Class" tags="" position="2024,763" size="100,100">(if: $talkToEmily is true)[(set: $talkToTA to true)(set: $objective12 to false)(set: $objective13 to true)TA: Hey! What can I do for you?
 
 You: Jackson and I heard from Emily that Jennifer left class abruptly last week. Do you know what happened?
 
@@ -291,7 +308,7 @@ TA: Jennifer told me that she had an emergency and needed to head to the coffee 
 
 [[Leave-&gt;Outside]]
 ]
-(elseif: $flashback1 is true)[(set: $classEmpty to true)Your vision fades back in, and you see that you&#39;re back in your normal classroom in 2122. Everyone is turning their quiz in, and all you have to turn in is a sheet of paper with illegible scribbles. 
+(elseif: $flashback1 is true)[(set: $classEmpty to true)(set: $objective2 to false)(set: $objective3 to true)Your vision fades back in, and you see that you&#39;re back in your normal classroom in 2122. Everyone is turning their quiz in, and all you have to turn in is a sheet of paper with illegible scribbles. 
 
 Jackson: Are you feeling okay? You don&#39;t look so good.
 
@@ -342,12 +359,12 @@ Laura: I&#39;ll always be here.
 
 Your vision goes black again.
 
-[[Snap out of it-&gt;Sydney&#39;s room]] </tw-passagedata><tw-passagedata pid="20" name="Jennifer&#39;s room" tags="" position="164,878" size="100,100">(if: $flashback5 is true)[Your vision fades back in, and you&#39;re back in Jennifer&#39;s room.
+[[Snap out of it-&gt;Sydney&#39;s room]] </tw-passagedata><tw-passagedata pid="20" name="Jennifer&#39;s room" tags="" position="163,878" size="100,100">(if: $flashback5 is true)[Your vision fades back in, and you&#39;re back in Jennifer&#39;s room.
 
 Jackson: Come on, we need to go find Jennifer&#39;s phone in the woods!
 
 [[Go back-&gt;Dorm]]]
-(elseif: $doorOpen is true)[Jennifer&#39;s door is unlocked, so you walk in. You find her laptop, and it isn&#39;t password protected. You open up Find My iPhone, and you discover that her phone is in the middle of the woods. 
+(elseif: $doorOpen is true)[(set: $objective19 to false)(set: $objective20 to true)Jennifer&#39;s door is unlocked, so you walk in. You find her laptop, and it isn&#39;t password protected. You open up Find My iPhone, and you discover that her phone is in the middle of the woods. 
 
 You feel tired, so you plop down into Jennifer&#39;s comfy couch. Your vision goes black again.
 
@@ -356,7 +373,7 @@ You feel tired, so you plop down into Jennifer&#39;s comfy couch. Your vision go
 
 [[Go back-&gt;Dorm]]]
 
-</tw-passagedata><tw-passagedata pid="21" name="Check Phone" tags="" position="1881,339" size="100,100">[[Amazon.com -- free 2 second shipping!-&gt;Amazon]]
+</tw-passagedata><tw-passagedata pid="21" name="Check Phone" tags="" position="1880,339" size="100,100">[[Amazon.com -- free 2 second shipping!-&gt;Amazon]]
 [[Google.com -- search for anything-&gt;Google]]
 [[Bluetown University Student Directory -- find student ID numbers-&gt;Student Directory]]
 
@@ -367,7 +384,7 @@ You feel tired, so you plop down into Jennifer&#39;s comfy couch. Your vision go
 [[Go back-&gt;Check Phone]]</tw-passagedata><tw-passagedata pid="23" name="Google" tags="" position="1722,144" size="100,100">(if: $foundPhone is true)[[[Search: How do you pick a lock?-&gt;pick lock]]]
 (else:)[I don&#39;t have anything to search for]
 
-[[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="24" name="Buy Blank ID Cards" tags="" position="2132,417" size="100,100">(set: $buyIdCards to true)Shipping complete! Pick up at the package center.
+[[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="24" name="Buy Blank ID Cards" tags="" position="2132,418" size="100,100">(set: $buyIdCards to true)Shipping complete! Pick up at the package center.
 
 [[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="25" name="Student Directory" tags="" position="2015,182" size="100,100">(if: $talkToPackageCenter is true)[[[Look up Jennifer Smith-&gt;Look up Jennifer Smith]]]
 (else:)[I don&#39;t have anyone to look up]
@@ -375,18 +392,18 @@ You feel tired, so you plop down into Jennifer&#39;s comfy couch. Your vision go
 [[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="26" name="Check Yearbooks" tags="" position="1122,1010" size="100,100">(if: $talkToPackageCenter is true)[[[Grab last year&#39;s yearbook to scan Jennifer&#39;s photo-&gt;Grab yearbook]]]
 (else:)[I don&#39;t have any yearbooks I want to look at.]
 
-[[Go back-&gt;Library]] </tw-passagedata><tw-passagedata pid="27" name="Use Printer" tags="" position="1399,993" size="100,100">(if: $talkToPackageCenter is true)[
+[[Go back-&gt;Library]] </tw-passagedata><tw-passagedata pid="27" name="Use Printer" tags="" position="1399,992" size="100,100">(if: $talkToPackageCenter is true)[
 (if:$buyIdCards is false)[Jackson: I think you still might need to buy some blank ID cards.]
 (elseif:$pickUpIdCards is false)[Jackson: I think you still might need to go to the Package Center to pick up the blank ID cards you bought.]
-(elseif:$foundIdNumber is false)[Jackson: I think you still might need to find Jennifer&#39;s ID number.]
+(elseif:$findIdNumber is false)[Jackson: I think you still might need to find Jennifer&#39;s ID number.]
 (elseif:$yearbook is false)[Jackson: I think you still might need to find a photo of Jennifer to scan.]
 (else:)[[Print a counterfeit ID card-&gt;Print ID card]]]
 (else:)[I don&#39;t need to print anything]
 
 [[Go back-&gt;Library]] 
-</tw-passagedata><tw-passagedata pid="28" name="Grab yearbook" tags="" position="1138,1159" size="100,100">(set: $yearbook to true)Got it!
+</tw-passagedata><tw-passagedata pid="28" name="Grab yearbook" tags="" position="1138,1160" size="100,100">(set: $yearbook to true)(set: $objective7 to false)Got it!
 
-[[Go back-&gt;Library]] </tw-passagedata><tw-passagedata pid="29" name="Print ID card" tags="" position="1288,1168" size="100,100">(set: $printIdCard to true)Success! The ID card printed out, and it looks real. 
+[[Go back-&gt;Library]] </tw-passagedata><tw-passagedata pid="29" name="Print ID card" tags="" position="1288,1168" size="100,100">(set: $printIdCard to true)(set: $objective8 to false)(set: $objective9 to true)Success! The ID card printed out, and it looks real. 
 
 [[Go back-&gt;Library]]</tw-passagedata><tw-passagedata pid="30" name="Flashback 3" tags="" position="1588,111" size="100,100">(set: $flashback3 to true)Your vision fades back in. You&#39;re back in Olivia&#39;s body, and you&#39;re still in the package center, which surprisingly looked pretty similar 100 years ago. Laura is grasping your arm. 
 
@@ -403,8 +420,8 @@ Laura: You know about that Bluetown secret society thing that everyone is always
 Your vision goes black again.
 
 [[Snap out of it-&gt;Package Center]] 
-</tw-passagedata><tw-passagedata pid="31" name="Security Office" tags="" position="1145,385" size="100,100">(if: $attemptBlackmail is true)[(set:$getFootage to true)You find Josh&#39;s office, and he is strangely missing. He&#39;s probably trying to get into Jennifer&#39;s room. You hop onto his computer and search for security footage from February 1st, 2022. After a bit of searching, you finally find the footage from the Package Center of Adam Bloom harassing Laura White. This should be enough to blackmail Eric with. ]
-(elseif: $talkToAlice is true)[(set: $listenToJosh to true)You find Josh&#39;s office, and you overhear him talking on the phone.
+</tw-passagedata><tw-passagedata pid="31" name="Security Office" tags="" position="1144,385" size="100,100">(if: $attemptBlackmail is true)[(set:$getFootage to true)(set: $objective16 to false)(set: $objective17 to true)You find Josh&#39;s office, and he is strangely missing. He&#39;s probably trying to get into Jennifer&#39;s room. You hop onto his computer and search for security footage from February 1st, 2022. After a bit of searching, you finally find the footage from the Package Center of Adam Bloom harassing Laura White. This should be enough to blackmail Eric with. ]
+(elseif: $talkToAlice is true)[(set: $listenToJosh to true)(set: $objective11 to false)(set: $objective14 to true) You find Josh&#39;s office, and you overhear him talking on the phone.
 
 Josh: Are you the maintenance people? I was hoping you had the keys for  Jennifer Smith&#39;s dorm room and could let me in. Yeah. Yeah, I know the other security guys don&#39;t think anything has happened to her, but I think I should check her room just in case. You can let me in tonight? Great, thanks.
 
@@ -413,11 +430,11 @@ You: Does this mean Josh didn&#39;t take Jennifer?
 Jackson: Maybe not. But I still don&#39;t trust him. I think we need to break into Jennifer&#39;s room before he does to search for clues. We could try asking the RA in our dorm to let us into her room.]
 (else:)[I don&#39;t have anything to do here.]
 
-[[Leave-&gt;Outside]] </tw-passagedata><tw-passagedata pid="32" name="Coffee Shop" tags="" position="1293,275" size="100,100">(if: $flashback7 is true)[(set: $getCoffee to true)You and Jackson walk up to the barista at the register.
+[[Leave-&gt;Outside]] </tw-passagedata><tw-passagedata pid="32" name="Coffee Shop" tags="" position="1292,273" size="100,100">(if: $flashback7 is true)[(set: $getCoffee to true)(set: $objective24 to false)(set: $objective25 to true)You and Jackson walk up to the barista at the register.
 
 You: Can I order a small chai latte?
 
-Barista: Sure! That will be $4.50. 
+Barista: Sure! That will be $10. 
 
 You pay and pick up the chai latte at the counter. 
 
@@ -425,7 +442,7 @@ You pay and pick up the chai latte at the counter.
 (elseif: $flashback4 is true)[Your vision fades back in, and you&#39;re back in the present day coffee shop. You glance out the windows, and you gasp when you see a dead cat on the ground right outside the coffee shop. 
 
 [[Leave-&gt;Outside]]]
-(elseif: $talkToTA is true)[(set: $talkToBarista to true)You and Jackson walk up to the barista at the register.
+(elseif: $talkToTA is true)[(set: $talkToBarista to true)(set: $objective13 to false)You and Jackson walk up to the barista at the register.
 
 You: Did you happen to see a girl named Jennifer Smith here last week? She looks like this.
 
@@ -458,7 +475,7 @@ Laura: Yes! But make that four cats.
 
 Your vision goes black again. 
 
-[[Snap out of it-&gt;Coffee Shop]] </tw-passagedata><tw-passagedata pid="34" name="RA&#39;s room" tags="" position="1075,730" size="100,100">(if: $getInvite is true)[(set: $doorOpen to true)You knock on the RA&#39;s door.
+[[Snap out of it-&gt;Coffee Shop]] </tw-passagedata><tw-passagedata pid="34" name="RA&#39;s room" tags="" position="1075,730" size="100,100">(if: $getInvite is true)[(set: $doorOpen to true)(set: $objective18 to false)(set: $objective19 to true)You knock on the RA&#39;s door.
 
 RA: Come in!
 
@@ -467,7 +484,7 @@ You and Jackson walk into the RA&#39;s room.
 You: We got you an invite into the Bluetown Secret Society. Here&#39;s the invite slip. Can we get into Jennifer&#39;s room now?
 
 RA: Woah, no way! Thank you. Sure, I&#39;ll open up Jennifer&#39;s room right now.]
-(elseif: $listenToJosh is true)[(set: $talkToRA to true)You knock on the RA&#39;s door. 
+(elseif: $listenToJosh is true)[(set: $talkToRA to true)(set: $objective14 to false)(set: $objective15 to true)You knock on the RA&#39;s door. 
 
 RA: Come in!
 
@@ -544,7 +561,7 @@ Your vision goes black again.
 
 [[Snap out of it-&gt;Woods]]
 
-</tw-passagedata><tw-passagedata pid="40" name="Bunker" tags="" position="1695,980" size="100,100">(if:$getCoffee is true)[You stretch your arm out to Olivia with the chai latte in your hand. She reaches out to grab it, and a smile breaks out on her face when she takes a sip. She slowly releases Jennifer as she enjoys her drink. Jackson and Jennifer watch as she appears to vanish, but you can feel that she trusts you and her soul is flowing into your body. You can feel her grief within you, and you know she isn&#39;t gone yet.
+</tw-passagedata><tw-passagedata pid="40" name="Bunker" tags="" position="1695,980" size="100,100">(if:$getCoffee is true)[(set: $objective25 to false)You stretch your arm out to Olivia with the chai latte in your hand. She reaches out to grab it, and a smile breaks out on her face when she takes a sip. She slowly releases Jennifer as she enjoys her drink. Jackson and Jennifer watch as she appears to vanish, but you can feel that she trusts you and her soul is flowing into your body. You can feel her grief within you, and you know she isn&#39;t gone yet.
 
 Jackson: This can&#39;t be real. Jennifer, are you okay?
 
@@ -553,7 +570,7 @@ Jennifer: Yeah... I&#39;m fine. Let&#39;s just get out of here.
 Before you leave, you spot Laura&#39;s pink backpack still sitting in the bunker. You decide to take it with you.
 
 [[Leave Bunker-&gt;Ending]]]
-(elseif: $flashback7 is true)[Your vision fades back in, and you and Jackson finish climbing down the ladder. You look around and see that you&#39;re in the same bunker that you just saw in your vision. In the corner, you see Olivia&#39;s ghost with Jennifer trapped in her grasp, unable to say anything with the ghost&#39;s hand wrapped around her mouth. Jennifer still has her lanyard around her neck with a Tile attached to it. 
+(elseif: $flashback7 is true)[(set: $objective24 to true)Your vision fades back in, and you and Jackson finish climbing down the ladder. You look around and see that you&#39;re in the same bunker that you just saw in your vision. In the corner, you see Olivia&#39;s ghost with Jennifer trapped in her grasp, unable to say anything with the ghost&#39;s hand wrapped around her mouth. Jennifer still has her lanyard around her neck with a Tile attached to it. 
 
 Jackson: Holy shit, is that actually a ghost? I guess Josh wasn&#39;t crazy after all. What the fuck do we do?
 
@@ -580,15 +597,18 @@ Your vision goes black again.
 
 But that night, you don&#39;t want to worry about dealing with the papers in the backpack. You just want to get back to the dorm. But along the way, you see Alex throwing her party outside, and she smiles and waves at you. You, Jackson, and Jennifer decide to join in. Alex asks you about how you&#39;re holding up after Samantha leaving, and you tell her about how sad you&#39;ve been lately. She tells you that she&#39;s here for you. You laugh and gossip and bond with the people at the party, and you can&#39;t remember the last time you felt this happy. At the end of the night, as you hug everyone to say goodbye and make plans to meet up again, you sense that the ghost inside you finally had the opportunity to grieve and feels at peace. The ghost flows out of you and dissipates into the night air. 
 
-The End</tw-passagedata><tw-passagedata pid="43" name="Buy lock picks" tags="" position="1836,505" size="100,100">(set: $buyLockPicks to true)Shipping complete! Pick up at the package center.
+The End</tw-passagedata><tw-passagedata pid="43" name="Buy lock picks" tags="" position="1835,505" size="100,100">(set: $buyLockPicks to true)Shipping complete! Pick up at the package center.
 
-[[Go back-&gt;Check Phone]]</tw-passagedata><tw-passagedata pid="44" name="pick lock" tags="" position="1857,32" size="100,100">(set: $googleSearch to true)Answer
+[[Go back-&gt;Check Phone]]</tw-passagedata><tw-passagedata pid="44" name="pick lock" tags="" position="1857,32" size="100,100">(set: $googleSearch to true)(set:$objective21 to false)(set: $objective22 to true)Answer
 Step 1: Buy a lock pick on Amazon
 ...
 
-[[Go back-&gt;Check Phone]]</tw-passagedata><tw-passagedata pid="45" name="Look up Jennifer Smith" tags="" position="2168,287" size="100,100">(set: $foundIdNumber to true)Jennifer Smith ID#: 4501392
+[[Go back-&gt;Check Phone]]</tw-passagedata><tw-passagedata pid="45" name="Look up Jennifer Smith" tags="" position="2168,287" size="100,100">(set: $findIdNumber to true)(set: $objective6 to false)Jennifer Smith ID#: 4501392
 
-[[Go back-&gt;Check Phone]] </tw-passagedata></tw-storydata>
+[[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="46" name="Sidebar" tags="footer" position="782,282" size="100,100">(append: ?SideBar)[Current Objectives:
+
+(if: $objective25 is true)[-Go to the woods to give Olivia the chai latte](if: $objective24 is true)[-Buy something that Olivia loves](if: $objective23 is true)[-Open the lock in the woods](if: $objective22 is true)[-Buy lock picks and pick them up at the package center](if: $objective21 is true)[-Search for how to pick locks](if: $objective20 is true)[-Go to the woods to find Jennifer&#39;s phone](if: $objective19 is true)[-Investigate Jennifer&#39;s room](if: $objective18 is true)[-Give the RA the Bluetown Secret Society invite](if: $objective17 is true)[-Go to Eric&#39;s room to blackmail him](if: $objective16 is true)[-Steal video footage from the security office](if: $objective15 is true)[-Ask Eric about the Bluetown Secret Society](if: $objective14 is true)[-Ask the RA about opening Jennifer&#39;s door](if: $objective13 is true)[-Go to the coffee shop](if: $objective12 is true)[-Talk to the TA in class](if: $objective11 is true)[-Go to the security office](if: $objective10 is true)[-Talk to people at the dorm](if: $objective9 is true)[-Pick up Jennifer&#39;s Package](if: $objective8 is true)[-Print out a counterfeit ID card](if: $objective7 is true)[-Get a photo of Jennifer](if: $objective6 is true)[-Get Jennifer&#39;s ID Number](if: $objective5 is true)[-Buy Blank ID Cards and pick up at the package center](if: $objective4 is true)[-Head to the package center](if: $objective3 is true)[-Talk to people at the dorm about Jennifer](if: $objective2 is true)[-Go to class](if: $objective1 is true)[-Explore the dorm]
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
