@@ -68,7 +68,9 @@ Go to:
 [[RA&#39;s room]]
 (if: $talkedToJackson is true)[
 [[Leave-&gt;Outside]]
-]</tw-passagedata><tw-passagedata pid="6" name="The lounge" tags="" position="15,867" size="100,100">(if: $talkedToJackson is true)[The lounge is empty.]
+]</tw-passagedata><tw-passagedata pid="6" name="The lounge" tags="" position="14,867" size="100,100">(if: $talkedToJackson is true)[The lounge is empty. There are a bunch of couches scattered around the room that are all stained in odd colors in various places. I don&#39;t know what caused those stains, but I&#39;d rather not think about it too much. 
+
+It is so weird to not see Jennifer in the lounge. She&#39;s usually so active in the dorm community and is here most of the time doing schoolwork. She says hi to everyone that walks in. I really hope she&#39;s okay.]
 (else:)[(set: $talkedToJackson to true)(set: $objective1 to false)(set: $objective2 to true)
 You see Jackson crying in the lounge. 
 
@@ -88,7 +90,9 @@ You: I&#39;m not sure, but I promise I&#39;ll help you later. We need to get to 
 
 [[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="7" name="Jackson&#39;s room" tags="" position="317,870" size="100,100">You knock on Jackson&#39;s door. There&#39;s no response.
 
-[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="8" name="Liam&#39;s room" tags="" position="465,871" size="100,100">You knock on Liam&#39;s door. 
+You: Jackson has always been a good friend to me. Every time I walk by his room, I think about those late nights I spent studying in his room. I really struggled in that one computer science class, but he stayed up with me and helped me learn the material. I&#39;d do anything to help him out. 
+
+[[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="8" name="Liam&#39;s room" tags="" position="464,870" size="100,100">You knock on Liam&#39;s door. 
 
 Liam: Come in!
 
@@ -97,11 +101,17 @@ Liam: Come in!
 You: Have you seen Jennifer recently? Jackson says she&#39;s missing. 
 
 Liam: We saw each other yesterday, and she said she was headed out to pick up a package at the package center.]
-(else:)[You walk into Liam&#39;s room and see that Liam, Alice, Sydney, and Liam are hanging out. 
+(else:)[You walk into Liam&#39;s room and see that Liam and Alice are hanging out. 
 
-Liam: Have you guys seen Jackson crying in the dorm lounge? 
+Liam: What&#39;s up?
 
-Alice: Yeah, I wonder what&#39;s going on.]
+You: Just checking to see if Jennifer was here. I guess she isn&#39;t. 
+
+Liam: Did you seen Jackson crying in the dorm lounge? 
+
+Alice: Yeah, I wonder what&#39;s going on.
+
+Liam: I&#39;m not sure, but he&#39;s usually so happy! It&#39;s so weird to see him like that.]
 
 [[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="9" name="Eric&#39;s room" tags="" position="618,870" size="100,100">You knock on Eric&#39;s door. 
 
@@ -136,7 +146,9 @@ You and Jackson walk into Eric&#39;s room.
 You: Have you seen Jennifer recently? Jackson says she&#39;s missing. 
 
 Eric: Haven&#39;t seen her.]
-(else:)[Eric: Go away!]
+(else:)[Eric: Go away!
+
+You: Eric has always been such an asshole. One time, I was having a conversation with Jennifer in the lounge about how she was really struggling in one of her engineering classes, and Eric walked by and told her she just isn&#39;t cut out for engineering and should switch majors.]
 
 [[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="10" name="Sydney&#39;s room" tags="" position="768,868" size="100,100">(if:$flashback2 is true)[Your vision fades back in. You&#39;re back in Sydney&#39;s room and see her talking to her mom. Why do these strange dreams keep happening?
 
@@ -149,16 +161,18 @@ You and Jackson walk into Sydney&#39;s room.
 
 You: Have you seen Jennifer recently? Jackson says she&#39;s missing.
 
-Sydney: Yeah, we were chatting in her room yesterday morning. Some guy in a uniform showed up to her room and introduced himself as Josh and said she needed to go with him somewhere. Sorry, I would say more, but my mom is calling me right now!
+Sydney: Yeah, we were working together on our group project in her room yesterday morning. Some guy in a uniform showed up to her room and introduced himself as Josh and said she needed to go with him somewhere. Sorry, I would say more, but my mom is calling me right now!
 
 You watch Sydney pick up the phone, and your vision goes black.
 
 [[Enter flashback-&gt;Flashback 2]]]
-(else:)[You knock on Sydney&#39;s door. There is no response.
+(else:)[You knock on Sydney&#39;s door. There&#39;s no response. 
+
+You: Jennifer and Sydney are always working on their group project together, so I thought Jennifer might be here. I guess not. 
 
 [[Go back-&gt;Dorm]]]
 
-</tw-passagedata><tw-passagedata pid="11" name="Alice&#39;s room" tags="" position="916,871" size="100,100">(if: $pepperspray is true)[(if: $talkToEmily is true)[(set: $objective10 to false)](set: $talkToAlice to true)(set: $objective11 to true)You knock on Alice&#39;s door.
+</tw-passagedata><tw-passagedata pid="11" name="Alice&#39;s room" tags="" position="915,871" size="100,100">(if: $pepperspray is true)[(if: $talkToEmily is true)[(set: $objective10 to false)](set: $talkToAlice to true)(set: $objective11 to true)You knock on Alice&#39;s door.
 
 Alice: Come in!
 
@@ -182,7 +196,9 @@ You and Jackson walk into Alice&#39;s room.
 You: Have you seen Jennifer recently? Jackson says she&#39;s missing. 
 
 Alice: Sorry, I haven&#39;t seen her for a while.]
-(else:)[You knock on Alice&#39;s door. There is no response.]
+(else:)[You knock on Alice&#39;s door. There is no response.
+
+You: I think I saw Alice in Liam&#39;s room. Alice and Liam are always gossipping about something together.]
 
 [[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="12" name="Emily&#39;s room" tags="" position="1067,871" size="100,100">(if: $pepperspray is true)[(if: $talkToAlice is true)[(set: $objective10 to false)](set: $talkToEmily to true)(set: $objective12 to true)You knock on Emily&#39;s door.
 
@@ -201,8 +217,14 @@ You and Jackson walk into Emily&#39;s room.
 
 You: Have you seen Jennifer recently? Jackson says she&#39;s missing. 
 
-Emily: No, I haven&#39;t seen her for a bit. Sorry. ]
-(else:)[You knock on Emily&#39;s door. There is no response.]
+Emily: No, I haven&#39;t seen her for a bit. We were supposed to have class together yesterday, and she didn&#39;t show up.]
+(else:)[You knock on Emily&#39;s door. 
+
+Emily: Come in!
+
+You: Hey, is Jennifer here by any chance?
+
+Emily: No, I haven&#39;t seen her for a while. I&#39;m not sure where she is.]
 
 [[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="13" name="Outside" tags="" position="1514,544" size="100,100">You&#39;re outside
 Go to:
@@ -371,6 +393,8 @@ You feel tired, so you plop down into Jennifer&#39;s comfy couch. Your vision go
 [[Enter Flashback-&gt;Flashback 5]]]
 (else:)[You knock on Jennifer&#39;s door. There&#39;s no response.
 
+You: I feel like Jennifer has been missing for a while. We usually hang out in the dorm every day with Jackson, and she always knows what to say to make me feel better. I&#39;m really starting to worry about her. And finding that locket in the woods was really strange...
+
 [[Go back-&gt;Dorm]]]
 
 </tw-passagedata><tw-passagedata pid="21" name="Check Phone" tags="" position="1880,339" size="100,100">[[Amazon.com -- free 2 second shipping!-&gt;Amazon]]
@@ -390,7 +414,7 @@ You feel tired, so you plop down into Jennifer&#39;s comfy couch. Your vision go
 (else:)[I don&#39;t have anyone to look up]
 
 [[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="26" name="Check Yearbooks" tags="" position="1122,1010" size="100,100">(if: $talkToPackageCenter is true)[[[Grab last year&#39;s yearbook to scan Jennifer&#39;s photo-&gt;Grab yearbook]]]
-(else:)[I don&#39;t have any yearbooks I want to look at.]
+(else:)[You: I don&#39;t have any yearbooks I want to look at.]
 
 [[Go back-&gt;Library]] </tw-passagedata><tw-passagedata pid="27" name="Use Printer" tags="" position="1399,992" size="100,100">(if: $talkToPackageCenter is true)[
 (if:$buyIdCards is false)[Jackson: I think you still might need to buy some blank ID cards.]
@@ -475,7 +499,7 @@ Laura: Yes! But make that four cats.
 
 Your vision goes black again. 
 
-[[Snap out of it-&gt;Coffee Shop]] </tw-passagedata><tw-passagedata pid="34" name="RA&#39;s room" tags="" position="1075,730" size="100,100">(if: $getInvite is true)[(set: $doorOpen to true)(set: $objective18 to false)(set: $objective19 to true)You knock on the RA&#39;s door.
+[[Snap out of it-&gt;Coffee Shop]] </tw-passagedata><tw-passagedata pid="34" name="RA&#39;s room" tags="" position="1074,730" size="100,100">(if: $getInvite is true)[(set: $doorOpen to true)(set: $objective18 to false)(set: $objective19 to true)You knock on the RA&#39;s door.
 
 RA: Come in!
 
@@ -499,7 +523,9 @@ You: Is there anything we could do to change your mind?
 RA: Not really. I guess you could try to get me into the Bluetown Secret Society, but that&#39;s basically impossible.
 
 Jackson: We need to try to talk to Eric.]
-(else:)[You knock on the RA&#39;s door. There is no response.]
+(else:)[You knock on the RA&#39;s door. There is no response.
+
+You: I feel like the RA is kind of unreliable. He&#39;s never here, and I feel like I almost need to manipulate him into helping me whenever I need help.]
 
 [[Go back-&gt;Dorm]]</tw-passagedata><tw-passagedata pid="35" name="Flashback 5" tags="" position="164,1028" size="100,100">(set: $flashback5 to true)Your vision fades back in. You are back in Olivia&#39;s body, and Jennifer&#39;s room has transformed. There are string lights up on the wall with pictures of Olivia and Laura together attached to the lights. You and Laura are sitting side by side on a couch with your hands interlocked. 
 
@@ -605,9 +631,9 @@ Step 1: Buy a lock pick on Amazon
 
 [[Go back-&gt;Check Phone]]</tw-passagedata><tw-passagedata pid="45" name="Look up Jennifer Smith" tags="" position="2168,287" size="100,100">(set: $findIdNumber to true)(set: $objective6 to false)Jennifer Smith ID#: 4501392
 
-[[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="46" name="Sidebar" tags="footer" position="782,282" size="100,100">(append: ?SideBar)[Current Objectives:
+[[Go back-&gt;Check Phone]] </tw-passagedata><tw-passagedata pid="46" name="Sidebar" tags="footer" position="782,281" size="100,100">(append: ?SideBar)[Current Objectives:
 
-(if: $objective25 is true)[-Go to the woods to give Olivia the chai latte](if: $objective24 is true)[-Buy something that Olivia loves](if: $objective23 is true)[-Open the lock in the woods](if: $objective22 is true)[-Buy lock picks and pick them up at the package center](if: $objective21 is true)[-Search for how to pick locks](if: $objective20 is true)[-Go to the woods to find Jennifer&#39;s phone](if: $objective19 is true)[-Investigate Jennifer&#39;s room](if: $objective18 is true)[-Give the RA the Bluetown Secret Society invite](if: $objective17 is true)[-Go to Eric&#39;s room to blackmail him](if: $objective16 is true)[-Steal video footage from the security office](if: $objective15 is true)[-Ask Eric about the Bluetown Secret Society](if: $objective14 is true)[-Ask the RA about opening Jennifer&#39;s door](if: $objective13 is true)[-Go to the coffee shop](if: $objective12 is true)[-Talk to the TA in class](if: $objective11 is true)[-Go to the security office](if: $objective10 is true)[-Talk to people at the dorm](if: $objective9 is true)[-Pick up Jennifer&#39;s Package](if: $objective8 is true)[-Print out a counterfeit ID card](if: $objective7 is true)[-Get a photo of Jennifer](if: $objective6 is true)[-Get Jennifer&#39;s ID Number](if: $objective5 is true)[-Buy Blank ID Cards and pick up at the package center](if: $objective4 is true)[-Head to the package center](if: $objective3 is true)[-Talk to people at the dorm about Jennifer](if: $objective2 is true)[-Go to class](if: $objective1 is true)[-Explore the dorm]
+(if: $objective25 is true)[-Go to the woods to give Olivia the chai latte.](if: $objective24 is true)[-Buy something that Olivia loves. (link: &quot;Hint&quot;)[Olivia loves chai lattes from the coffee shop]](if: $objective23 is true)[-Open the lock in the woods.](if: $objective22 is true)[-Buy lock picks and pick them up at the package center. (link: &quot;Hint&quot;)[Use Amazon.com on your phone to buy the lock picks]](if: $objective21 is true)[-Search for how to pick locks. (link: &quot;Hint&quot;)[Use Google on your phone]](if: $objective20 is true)[-Go to the woods to find Jennifer&#39;s phone.](if: $objective19 is true)[-Investigate Jennifer&#39;s room.](if: $objective18 is true)[-Give the RA the Bluetown Secret Society invite.](if: $objective17 is true)[-Go to Eric&#39;s room to blackmail him.](if: $objective16 is true)[-Steal video footage from the security office.](if: $objective15 is true)[-Ask Eric about the Bluetown Secret Society.](if: $objective14 is true)[-Ask the RA about opening Jennifer&#39;s door.](if: $objective13 is true)[-Go to the coffee shop.](if: $objective12 is true)[-Talk to the TA in class.](if: $objective11 is true)[-Go to the security office.](if: $objective10 is true)[-Talk to people at the dorm. (link: &quot;Hint&quot;)[Talk to Alice and Emily]](if: $objective9 is true)[-Pick up Jennifer&#39;s Package. (link: &quot;Hint&quot;)[Go to the package center]](if: $objective8 is true)[-Print out a counterfeit ID card. (link: &quot;Hint&quot;)[Use the printer in the library]](if: $objective7 is true)[-Get a photo of Jennifer. (link: &quot;Hint&quot;)[Go to the library and check the yearbooks]](if: $objective6 is true)[-Get Jennifer&#39;s ID Number. (link: &quot;Hint&quot;)[Use the ID number lookup on your phone]](if: $objective5 is true)[-Buy Blank ID Cards and pick up at the package center. (link: &quot;Hint&quot;)[Use Amazon.com on your phone to buy the blank ID cards]](if: $objective4 is true)[-Head to the package center.](if: $objective3 is true)[-Talk to people at the dorm about Jennifer. (link: &quot;Hint&quot;)[Talk to Liam and Sydney in the dorm]](if: $objective2 is true)[-Go to class.](if: $objective1 is true)[-Explore the dorm. (link: &quot;Hint&quot;)[Find Jackson in the lounge]]
 ]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
