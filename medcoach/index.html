@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedCoach: Medication Tracker</title>
+    <link rel="shortcut icon" href="images/app_logo.png" />
+    <!-- LATO — Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End: LATO — Google Font -->
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <!-- End: Main CSS File -->
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+    <!-- Preloader End -->
+    <!-- Header Section -->
+    <header id="home">
+      <nav>
+          <a href="#">
+            <img src="./images/logo.png" alt="MedCoach logo" class="logo">
+          </a>
+        <!-- <div id="navbar">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#features">FEATURES</a></li>
+            <li><a href="#testimonial">TESTIMONIAL</a></li>
+            <li><a href="#howto">HOW TO</a></li>
+            <li><a href="#download">DOWNLOAD</a></li>
+          </ul>
+        </div> -->
+        <!-- <div id="mobileNav">
+          <span onclick="openNav()">&#9776;</span>
+        </div>
+        <div id="myNav" class="mobileNavOverlay">
+          <div class="overlay-content">
+            <a href="javascript:void()" class="close-btn" onclick="closeNav()"
+              >&times;</a
+            >
+            <a href="#home" onclick="closeNav()">HOME</a>
+            <a href="#features" onclick="closeNav()">FEATURES</a>
+            <a href="#testimonial" onclick="closeNav()">TESTIMONIAL</a>
+            <a href="#howto" onclick="closeNav()">HOW TO</a>
+            <a href="#download" onclick="closeNav()">DOWNLOAD</a>
+          </div>
+        </div> -->
+      </nav>
+      <div id="hero">
+        <div class="row">
+          <div class="col span_1_of_2">
+            <div class="hero-description">
+              <h1>
+                Smart medication & health tracker
+              </h1>
+              <p>
+                Discover how your medications <span class="bold-text">impact your health.</span>
+              </p>
+
+              <a href="#download" class="btn"
+                ><span class="download-btn"> Coming Soon</span></a
+              >
+            </div>
+          </div>
+          <div class="col span_1_of_2">
+            <img class="hero-img" src="images/phone.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="shape-divider">
+        <div class="custom-shape-divider-bottom-1603385849">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <button onclick="topFunction()" id="scrollUp" title="Go to top">
+        <svg
+          width="1.5rem"
+          height="1.5rem"
+          viewBox="0 0 16 16"
+          class="bi bi-arrow-up"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+          />
+        </svg>
+      </button>
+    </header>
+    <!-- End: Header Section -->
+
+    <!-- Features Section -->
+    <section id="features">
+      <div class="row">
+        <div class="col span_1_of_2">
+          <div class="features-images">
+            <img class="features_1" src="images/medication_logging.png" alt="" />
+          </div>
+        </div>
+        <div class="col span_1_of_2">
+          <div class="section-description features-description col1">
+            <h2 class="stylish_heading">
+              Simple Logging
+            </h2>
+            <p class="little-description">
+              Easily keep track of medications you're currently taking and 
+              have taken in the past. You only need to open the app when you 
+              take your medication.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row second-features-row">
+        <div class="col span_1_of_2">
+          <div class="section-description features-description">
+            <h2 class="stylish_heading">
+              Monitor with Detailed Graphs
+            </h2>
+            <p class="little-description">
+              MedCoach's graphs and visualizations help you understand what impacts
+              your medications might have on your health. They display daily health 
+              data, long term health data, and the impact of when & how many of a medication 
+              was taken.
+            </p>
+          </div>
+        </div>
+        <div class="col span_1_of_2">
+          <div class="features-images">
+            <img class="features_3" src="images/graphs.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span_1_of_2">
+          <div class="features-images">
+            <img class="features_1" src="images/insights.png" alt="" />
+          </div>
+        </div>
+        <div class="col span_1_of_2">
+          <div class="section-description features-description col1">
+            <h2 class="stylish_heading">
+              Advanced Health Metrics
+            </h2>
+            <p class="little-description">
+              The data types displayed include total sleep, time awake while in 
+              bed, restorative sleep, resting heart rate, and heart rate variability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End: Features Section -->
+
+    <!-- Testimonial Section -->
+    <!-- <section id="testimonial">
+      <h2 class="stylish_heading">
+        What people say <span class="red_dot">.</span>
+      </h2>
+      <div class="row">
+        <div class="col span_1_of_3">
+          <div class="bubble">
+            <p class="message">
+              "Lorem ipsum dolor sit amet, onsectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim"
+            </p>
+            <span class="company-name">Booking.com</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/avatar1.jpg" alt="" />
+            <div class="name">
+              <h4>John Doe</h4>
+              <p class="role">CEO</p>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3">
+          <div class="bubble">
+            <p class="message">
+              "Lorem ipsum dolor sit amet, onsectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim"
+            </p>
+            <span class="company-name">Airnbnb</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/avatar2.jpg" alt="" />
+            <div class="name">
+              <h4>John Doe</h4>
+              <p class="role">CEO</p>
+            </div>
+          </div>
+        </div>
+        <div class="col span_1_of_3">
+          <div class="bubble">
+            <p class="message">
+              "Lorem ipsum dolor sit amet, onsectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim"
+            </p>
+            <span class="company-name">Symu.co</span>
+          </div>
+          <div class="client-info">
+            <img class="avatar" src="images/avatar3.jpg" alt="" />
+            <div class="name">
+              <h4>John Doe</h4>
+              <p class="role">CEO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- End: Testimonial Section -->
+
+    <!-- How To Section -->
+    <section id="howto">
+      <div class="row">
+        <div class="col span_1_of_2">
+          <h2 class="stylish_heading last-item">
+            Available in <br>
+            dark mode 
+          </h2>
+        </div>
+        <div class="col span_1_of_2">
+          <img class="big_image" src="images/darkmode.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- End: How To Section -->
+
+    <!-- Subscribe Section -->
+    <!-- <section id="subscribe">
+      <div class="row">
+        <h2 class="stylish_heading">
+          Subscribe to our newsletter <span class="red_dot">.</span>
+        </h2>
+        <p class="">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna.
+        </p>
+      </div>
+      <div class="subscribe-form">
+        <input
+          class="form-input"
+          type="email"
+          placeholder="Your email address"
+          required
+        />
+        <input type="submit" class="btn subscribe-btn" value="Subscribe" />
+      </div>
+    </section> -->
+    <!-- End: Subscribe Section -->
+
+    <!-- Download The App Section -->
+    <section id="download">
+      <div class="row">
+        <img class="app-logo" src="images/app_logo.png" alt="" />
+        <h2 class="stylish_heading">
+          Coming Soon!
+        </h2>
+        <!-- <p class="">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et.
+        </p>
+
+        <a href="javascript:void()">
+          <img src="images/appstore.png" alt=""
+        /></a> -->
+      </div>
+    </section>
+    <!-- End: Download The App Section -->
+
+    <!-- Footer Section -->
+    <section id="footer">
+      <div class="links">
+        <ul>
+          <li><a href="privacy-policy/">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions/">Terms and Conditions</a></li>
+        </ul>
+      </div>
+      <div>
+        Copyright &copy; Rachel Naidich 2023
+      </div>
+      <!-- <div class="language-option">
+        <select name="Languages">
+          <option value="English" selected>ENGLISH</option>
+          <option value="বাংলা">বাংলা</option>
+          <option value="हिन्दी">हिन्दी</option>
+        </select>
+      </div> -->
+    </section>
+    <!-- End: Footer Section -->
+
+    <!-- Required JavaScript Files & CDN -->
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Main JS Files -->
+    <script src="js/essential.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
