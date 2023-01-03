@@ -82,14 +82,13 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    height: 800px;
-    background-image: url(../img/banner.jpg);
-    background-position-x: center;
+    background: url(../img/header.jpg) no-repeat center center;
+    background-size: cover;
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    height: 100vh;
+    padding-top: 50vh;
 }
 
 header img {
@@ -131,10 +130,10 @@ header .btn-outline.active  {
 }
 
 @media(min-width:768px) {
-    header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
-    }
+    /* header .container {
+        padding-top: 400px;
+        padding-bottom: 200px;
+    } */
 
     header .intro-text .name {
         font-size: 4.75em;
@@ -222,7 +221,9 @@ section.success {
 }
 
 #portfolio .portfolio-item .portfolio-link {
-    display: block;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
@@ -237,6 +238,7 @@ section.success {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
+    z-index: 3;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
@@ -306,13 +308,14 @@ section.success {
 }
 
 .profile-picture {
-    height: 400px;
-    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 .about-text {
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 20px;
 }
 
 .btn-outline {
@@ -409,7 +412,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #{{ site.color.secondary-dark }};
+    background-color: #{{ site.color.secondary }};
 }
 
 .btn-social {
