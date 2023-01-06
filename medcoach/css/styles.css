@@ -840,7 +840,6 @@ nav {
 #footer {
   border-top: 1px solid #e0e0e0;
   display: flex;
-  flex-flow: row;
   justify-content: space-between;
   padding: 20px 50px;
   color: #363636;
@@ -848,20 +847,20 @@ nav {
 
 .links ul li {
   display: inline-block;
-  margin: 10px 0;
-  margin-right: 30px;
+  margin: 10px 10px;
   font-size: 18px;
 }
 
-.links ul li:hover {
+.links ul li a:hover {
   background: linear-gradient(to bottom, var(--dark) 10%, var(--light) 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
 }
 
 .links ul li a {
   color: #363636;
+  text-decoration: underline;
 }
 /* End: Footer Section Styling */
 
@@ -1034,8 +1033,7 @@ nav {
   .links ul li {
     text-align: center;
     display: inline-block;
-    margin: 8px 0;
-    margin-right: 20px;
+    margin: 8px 8px;
     font-size: 16px;
   }
 
@@ -1215,8 +1213,7 @@ nav {
   .links ul li {
     text-align: center;
     display: inline-block;
-    margin: 8px 0;
-    margin-right: 20px;
+    margin: 8px 8px;
     font-size: 18px;
   }
 
